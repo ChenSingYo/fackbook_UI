@@ -1,6 +1,9 @@
 ## **Fackbook_UI**
 透過tailwindcss，仿照FB刻一個主頁畫面，並用webpack打包專案
 
+demo:
+https://chensingyo.github.io/fackbook_UI/
+
 ## **Setup**
 下載npm相關套件（devDependencies）
 ```bash
