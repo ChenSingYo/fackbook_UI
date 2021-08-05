@@ -26,6 +26,17 @@ npm run serve
 http://localhost:3000
 ```
 
+## **Build With**
+
+Webpack
+
+tailwindcss 2.2
+
+axios + unsplash api
+
+swiper.js
+
+
 ## **devDependencies**
 
 "@babel/core": "^7.14.8"
