@@ -90,7 +90,7 @@ function renderLeftItem(name, imageUrl) {
         cursor-pointer
       "
     >
-      <div class="w-[32px] overflow-hidden rounded-full mr-4">
+      <div class="w-[36px] h-[36px] overflow-hidden rounded-full mr-4">
         <img src="${imageUrl}" alt="" />
       </div>
       <p class="text-white text-[.9rem]">${name}</p>
@@ -104,7 +104,7 @@ function renderLeftBlock() {
   const leftArr = [
     {
       name: "SingYo",
-      img: "https://bruce-fe-fb.web.app/image/avator.png",
+      img: "https://drive.google.com/uc?export=download&id=1SVJqSCbqVfFv8epyIVQn3OnILY8X0BDs",
     },
     {
       name: "活動",
