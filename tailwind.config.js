@@ -3,7 +3,7 @@ module.exports = {
 
   // 開啟just in time模式
   mode: 'jit',
-  darkMode: 'false', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       spacing: {
@@ -14,7 +14,9 @@ module.exports = {
         'fb-header': '#242526',
         'fb-input': '#3a3b3c',
         'fb-popover': '#3e4042',
-        'fb-active': '#323436',
+        'fb-popover-hover-on': '#5e5e5e',
+        'fb-active': 'rgb(56, 88, 152)',
+        'fb-hover-active': 'rgb(56, 88, 130, 0.7)',
         'fb-card': '#242526',
         'fb': '#2e89ff'
       }

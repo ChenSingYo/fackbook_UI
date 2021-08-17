@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
   <meta charset="UTF-8">
@@ -58,18 +58,18 @@
     </div>
 
     <!-- header right -->
-    <div class="flex items-center relative">
-      <button class="popover-btn" id="plus-btn">
-        <img src="https://bruce-fe-fb.web.app/image/plus.svg" />
+    <div class="flex items-center relative" id="header-r-panel">
+      <button class="popover-btn duration-300" id="plus-btn">
+        <img class="pointer-events-none" src="https://bruce-fe-fb.web.app/image/plus.svg" />
       </button>
-      <button class="popover-btn" id="msg-btn">
-        <img src="https://bruce-fe-fb.web.app/image/messenger.svg" />
+      <button class="popover-btn duration-300" id="msg-btn">
+        <img class="pointer-events-none" src="https://bruce-fe-fb.web.app/image/messenger.svg" />
       </button>
-      <button class="popover-btn" id="notification-btn">
-        <img src="https://bruce-fe-fb.web.app/image/bell.svg" />
+      <button class="popover-btn duration-300" id="notification-btn">
+        <img class="pointer-events-none" src="https://bruce-fe-fb.web.app/image/bell.svg" />
       </button>
-      <button class="popover-btn" id="more-btn">
-        <img src="https://bruce-fe-fb.web.app/image/down.svg" />
+      <button class="popover-btn duration-300" id="more-btn">
+        <img class="pointer-events-none" src="https://bruce-fe-fb.web.app/image/down.svg" />
       </button>
 
       <!-- 下拉選單 1 plus -->
@@ -124,7 +124,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <input type="text" class="w-full bg-transparent focus:outline-none text-white" placeholder="搜尋 Messenger" />
+          <input type="text" id="msg-input"class="w-full bg-transparent focus:outline-none text-white" placeholder="搜尋 Messenger" />
         </div>
 
         <div class="
@@ -183,7 +183,7 @@
               hover:bg-fb-input
               cursor-pointer
             ">
-          <div class="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
+          <div class="w-[60px] h-[60px] rounded-full overflow-hidden mr-3">
             <img class="w-full object-cover" src="https://drive.google.com/uc?export=download&id=1SVJqSCbqVfFv8epyIVQn3OnILY8X0BDs" alt="" />
           </div>
           <div class="flex-1">
@@ -219,7 +219,6 @@
         </div>
       </div>
     </div>
-  </header>
   </header>
   <main class="main-h-[100vh] pt-main-span flex">
     <!-- 左側資訊欄 -->
@@ -261,7 +260,7 @@
                   ">
                   <img src="https://bruce-fe-fb.web.app/image/plus.svg" />
                 </button>
-                <p class="w-full text-center text-white">建立限時動態</p>
+                <p class="w-full text-center text-white dark:text-red-500">建立限時動態</p>
               </div>
             </div>
           </div>
