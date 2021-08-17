@@ -44,6 +44,11 @@ window.addEventListener('click', function (e) {
 
 headerRightPanel.addEventListener('click', function togglePanel (e) {
   e.stopPropagation()
+  if (e.target.classList.contains('bg-fb-active')) {
+    openPanel(-1)
+    btnSwitchActive(-1)
+    return
+  }
   switch (e.target.id) {
     case 'plus-btn':
       openPanel(0)
@@ -304,7 +309,7 @@ function renderLiveItem(pics) {
 // 透過unsplash api取得隨機照片，收到圖片後執行渲染
 
 const randomPics = []
-const API_URL = 'https://api.unsplash.com/search/photos?&query=user&orientation=portrait&600*400&client_id=Jb3jHPMSvjP7CBjQfbO-qfKTcdf2l6UEHU65RbVpZ4A&per_page=25'
+const API_URL = 'https://api.unsplash.com/search/photos?&query=human&orientation=portrait&600*400&client_id=Jb3jHPMSvjP7CBjQfbO-qfKTcdf2l6UEHU65RbVpZ4A&per_page=25'
 const getAndRenderPics = function (url) {
   axios
     .get(url)
