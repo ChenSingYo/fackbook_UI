@@ -13,6 +13,7 @@ module.exports = {
         'fb-bg': '#18191a',
         'fb-header': '#242526',
         'fb-input': '#3a3b3c',
+        'fb-hover-input': '#5a5b5c',
         'fb-popover': '#3e4042',
         'fb-popover-hover-on': '#5e5e5e',
         'fb-active': 'rgb(56, 88, 152)',

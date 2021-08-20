@@ -2,6 +2,8 @@ import axios from 'axios'
 import './index.css'
 
 
+// 右側欄按鈕邏輯控制
+
 const headerRightPanel = document.getElementById('header-r-panel')
 
 const plusPanel = document.getElementById('plus-panel')
@@ -70,9 +72,17 @@ headerRightPanel.addEventListener('click', function togglePanel (e) {
 })
 
 
+// 右側欄 > more > 日間／夜間顯示模式
+
+const colorThemeSwitcher = document.getElementById('color-theme-switcher')
+const colorThemeInfo = document.getElementById('color-theme-info')
+
+colorThemeSwitcher.addEventListener('click', function switchColor (e) {
+  console.log(e.target)
+})
 // 用字符模板渲染左側資訊欄
 
-const leftBlock = document.getElementById("left-block");
+const leftBlock = document.getElementById('left-block')
 
 function renderLeftItem(name, imageUrl) {
   const item = `

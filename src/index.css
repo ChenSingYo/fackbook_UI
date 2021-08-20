@@ -4,10 +4,10 @@
 
 @layer components {
   .popover-btn {
-    @apply w-[39px] h-[39px] p-2.5 ml-2 rounded-full bg-fb-popover flex justify-center items-center cursor-pointer hover:bg-fb-popover-hover-on active:bg-fb-active;
+    @apply w-[39px] h-[39px] p-2 ml-2 rounded-full bg-fb-popover flex justify-center items-center cursor-pointer hover:bg-fb-popover-hover-on active:bg-fb-active;
   }
   .popover-panel {
-    @apply w-[300px] p-4 bg-fb-header rounded-lg shadow-lg absolute right-0 top-12 border border-fb-input lg:w-[360px];
+    @apply w-[300px] p-2 bg-fb-header rounded-lg shadow-lg absolute right-0 top-12 border border-fb-input lg:w-[360px];
   }
   .story {
     @apply flex-1 px-[4px] min-w-[120px] cursor-pointer;
