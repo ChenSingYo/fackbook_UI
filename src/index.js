@@ -32,9 +32,9 @@ function openPanel(index) {
 function btnSwitchActive(index) {
   btns.forEach((btn, idx) => {
     if (index === idx) {
-      btn.classList.add('bg-fb-active', 'hover:bg-fb-hover-active')
+      btn.classList.add('bg-fb-active','dark:bg-fb-active-dark', 'dark:hover:bg-fb-hovering-active-dark', 'hover:bg-fb-hover-active')
     } else {
-      btn.classList.remove('bg-fb-active', 'hover:bg-fb-hover-active')
+      btn.classList.remove('bg-fb-active','dark:bg-fb-active-dark', 'dark:hover:bg-fb-hovering-active-dark', 'hover:bg-fb-hover-active')
     }
   })
 }
@@ -76,10 +76,23 @@ headerRightPanel.addEventListener('click', function togglePanel (e) {
 
 const colorThemeSwitcher = document.getElementById('color-theme-switcher')
 const colorThemeInfo = document.getElementById('color-theme-info')
+const logoSun = document.getElementById('logo-sun')
+const logoMoon = document.getElementById('logo-moon')
 
 colorThemeSwitcher.addEventListener('click', function switchColor (e) {
-  console.log(e.target)
+  document.documentElement.classList.toggle('dark')
+  if (colorThemeInfo.innerText === '顯示：夜晚') {
+    colorThemeInfo.innerText = '顯示：白天'
+    logoSun.classList.remove('hidden')
+    logoMoon.classList.add('hidden')
+
+  } else {
+    colorThemeInfo.innerText = '顯示：夜晚'
+    logoSun.classList.add('hidden')
+    logoMoon.classList.remove('hidden') 
+  }
 })
+
 // 用字符模板渲染左側資訊欄
 
 const leftBlock = document.getElementById('left-block')
@@ -96,13 +109,14 @@ function renderLeftItem(name, imageUrl) {
         mb-1
         rounded
         hover:bg-fb-input
+        dark:hover:bg-fb-hover-input-dark
         cursor-pointer
       "
     >
       <div class="w-[36px] h-[36px] overflow-hidden rounded-full mr-4">
         <img src="${imageUrl}" alt="" />
       </div>
-      <p class="text-white text-[.9rem]">${name}</p>
+      <p class="text-black dark:text-white text-[.9rem]">${name}</p>
     </div>
   `;
 
@@ -189,6 +203,7 @@ function renderRightBlock(pics) {
         pl-8
         rounded
         hover:bg-fb-input
+        dark:hover:bg-fb-hover-input-dark
         cursor-pointer
       "
     >
@@ -206,12 +221,14 @@ function renderRightBlock(pics) {
               absolute
               bottom-0
               right-0
-              ring-gray-900 ring
+              ring
+              ring-fb-bg
+              dark:ring-gray-900
             "
           ></div>
         </div>
       </div>
-      <p class="text-white text-[0.9rem]">
+      <p class="text-black dark:text-white text-[0.9rem]">
       ${pic.user.name}
       </p>
     </div>
@@ -231,22 +248,15 @@ function renderStoryItem(randomPics) {
     divBox.classList.add('flex-1', 'px-[4px]', 'min-w-[160px]', 'z-0')
 
     divBox.innerHTML = `
-      <div class="z-10 relative overflow-hidden w-full h-full rounded-lg" id="story-${i}">
-
-        <div 
-          id="story-mask-${i}" 
-          class="
-            cursor-pointer 
-            hidden
-            absolute 
-            w-full h-full top-0 left-0 
-            bg-black/20 
-            z-20">
-        </div>
-
-        <div class="w-[32px] h-[32px] absolute top-4 left-4 ring-4 ring-fb bg-fb-card rounded-full flex justify-center items-center z-30 pointer-events-none">
-          <img class="rounded-full" src="${randomPics[i].user.profile_image.small}">
-        </div>
+      <div 
+        class="
+          z-10 
+          relative 
+          overflow-hidden 
+          w-full h-full 
+          rounded-lg" 
+        id="story-${i}"
+      >
 
         <img 
           id="story-image-${i}" 
@@ -254,18 +264,20 @@ function renderStoryItem(randomPics) {
             relative
             w-full h-full object-cover 
             duration-200
-            filter brightness-100
             cursor-pointer
+            filter brightness-100
             hover:scale-105
             hover:brightness-75
           " 
           src="${randomPics[i].urls.regular}" 
         />
 
-        <p class="absolute bottom-2 left-2 text-white text-shadow-xl cursor-pointer z-40">
+        <p class="absolute bottom-2 left-2 text-white text-shadow-xl cursor-pointer z-30">
         ${randomPics[i].user.first_name}
         </p>
-
+        <div class="w-[32px] h-[32px] absolute m-2 top-1 left-1 ring-4 ring-fb bg-fb-card rounded-full flex justify-center items-center z-10 pointer-events-none">
+          <img class="rounded-full" src="${randomPics[i].user.profile_image.small}">
+        </div>
       </div>
     `
     storyList.appendChild(divBox)
@@ -283,22 +295,34 @@ function renderLiveItem(pics) {
     swiperLive.innerHTML += `
       <div class="w-[55px]">
         <div class="relative w-[40px] cursor-pointer">
-          <div class="overflow-hidden rounded-full">
+          <div 
+            class="
+              overflow-hidden 
+              rounded-full 
+              border ring-[0.1px] ring-[#ced0d2]
+            "
+          >
             <img
+              class="filter hover:brightness-90"
               src="${pic.user.profile_image.large}"
               alt=""
             />
           </div>
           <div
             class="
-              w-[10px]
-              h-[10px]
+              w-[9px]
+              h-[9px]
               rounded-full
               bg-green-500
+              overflow-hidden
+              opacity-[99%]
               absolute
               bottom-0
               right-0
-              ring-gray-900 ring
+              ring-[2px]
+              ring-fb-bg
+              dark:ring-gray-900
+              pointer-events-none
             "
           ></div>
         </div>

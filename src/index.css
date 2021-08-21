@@ -4,16 +4,31 @@
 
 @layer components {
   .popover-btn {
-    @apply w-[39px] h-[39px] p-2 ml-2 rounded-full bg-fb-popover flex justify-center items-center cursor-pointer hover:bg-fb-popover-hover-on active:bg-fb-active;
+    @apply 
+      w-[39px] h-[39px] p-2 ml-2 
+      rounded-full 
+      bg-fb-popover 
+      hover:bg-fb-popover-hover-on
+      dark:bg-fb-popover-dark
+      dark:hover:bg-fb-popover-hovering-dark
+      flex justify-center items-center 
+      cursor-pointer
+      active:bg-fb-active;
   }
   .popover-panel {
-    @apply w-[300px] p-2 bg-fb-header rounded-lg shadow-lg absolute right-0 top-12 border border-fb-input lg:w-[360px];
+    @apply 
+      w-[300px] p-2 
+      bg-fb-header dark:bg-fb-header-dark
+      rounded-lg shadow-lg 
+      absolute right-0 top-12 
+      border border-fb-input dark:border-fb-input-dark
+      lg:w-[360px];
   }
   .story {
     @apply flex-1 px-[4px] min-w-[120px] cursor-pointer;
   }
   .card {
-    @apply rounded-lg mt-4 px-4 py-3 bg-fb-card;
+    @apply rounded-lg mt-4 px-4 py-0 bg-fb-card dark:bg-fb-card-dark;
   }
 }
 
@@ -35,29 +50,25 @@
 }
 
 .swiper-button-next {
-  background-image: url('https://bruce-fe-fb.web.app/image/right-arrow.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: center;
   border-radius: 9999px;
-  background-color: #3e4042;
-  width: 36px !important;
-  height: 36px !important;
-  top: 29px !important;
+  width: 48px !important;
+  height: 48px !important;
+  top: 30px !important;
 }
 
 .swiper-button-prev {
-  background-image: url('https://bruce-fe-fb.web.app/image/left-arrow.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: center;
   border-radius: 9999px;
-  background-color: #3e4042;
-  width: 36px !important;
-  height: 36px !important;
-  top: 29px !important;
+  width: 48px !important;
+  height: 48px !important;
+  top: 30px !important;
 }
 
 .swiper-button-disabled {
   opacity: 0 !important;
+}
+
+.swiper-slide {
+  margin: 2px;
+  display: flex;
+  align-items: center;
 }

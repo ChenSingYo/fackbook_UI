@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-  class="">
+  class="box-border">
 
   <head>
     <meta charset="UTF-8">
@@ -14,10 +14,10 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
 
-  <body class="bg-fb-bg">
+  <body class="bg-fb-bg dark:bg-fb-bg-dark">
     <header class="
       w-full h-[56px]
-      bg-fb-header 
+      bg-fb-header dark:bg-fb-header-dark
       fixed top-0 left-0 right-0
       flex items-center justify-between px-4
       z-40">
@@ -47,10 +47,12 @@
         </svg>
         <!-- search bar (只在電腦版顯示) -->
         <button class="popover-btn lg:hidden">
-          <span class="iconify text-white" data-icon="bx:bx-search" data-height="40"></span>
+          <span class="iconify text-[#606770] dark:text-white"
+            data-icon="bx:bx-search"
+            data-height="40"></span>
         </button>
         <div class="
-            bg-fb-input
+            bg-fb-input dark:bg-fb-input-dark
             ml-2
             py-2
             px-3
@@ -60,9 +62,11 @@
             hidden
             lg:flex
           ">
-          <span class="iconify text-gray-400 mr-1 pt-[3px]" data-icon="bx:bx-search" data-height="23"></span>
+          <span class="iconify text-black dark:text-gray-400 mr-1 pt-[3px]"
+            data-icon="bx:bx-search"
+            data-height="23"></span>
           <input type="text"
-            class="w-full bg-transparent text-white focus:outline-none"
+            class="w-full bg-transparent text-black dark:text-white focus:outline-none"
             placeholder="搜尋 Facebook" />
         </div>
       </div>
@@ -72,37 +76,45 @@
         id="header-r-panel">
         <button class="popover-btn duration-300"
           id="plus-btn">
-          <span class="iconify pointer-events-none text-white" data-icon="akar-icons:plus" data-height="40"></span>
+          <span class="iconify pointer-events-none text-black dark:text-white active:text-fb"
+            data-icon="akar-icons:plus"
+            data-height="40"></span>
         </button>
         <button class="popover-btn duration-300"
           id="msg-btn">
-          <span class="iconify pointer-events-none text-white" data-icon="ri:messenger-fill" data-height="40"></span>
+          <span class="iconify pointer-events-none text-black dark:text-white"
+            data-icon="ri:messenger-fill"
+            data-height="40"></span>
         </button>
         <button class="popover-btn duration-300"
           id="notification-btn">
-          <span class="iconify pointer-events-none text-white" data-icon="ion:notifications" data-height="40"></span>
+          <span class="iconify pointer-events-none text-black dark:text-white active:text-fb"
+            data-icon="ion:notifications"
+            data-height="40"></span>
         </button>
         <button class="popover-btn duration-300"
           id="more-btn">
-          <span class="iconify pointer-events-none text-white" data-icon="bi:caret-down-fill" data-height="20"></span>
+          <span class="iconify pointer-events-none text-black dark:text-white active:text-fb"
+            data-icon="bi:caret-down-fill"
+            data-height="20"></span>
         </button>
 
         <!-- 下拉選單 1 plus -->
         <div class="popover-panel hidden"
           id="plus-panel">
-          <p class="text-white mb-3 text-2xl">建立</p>
+          <p class="text-[#606770] dark:text-white mb-3 text-2xl">建立</p>
 
           <div class="
               flex
               items-center
               p-1
               mb-2
-              hover:bg-fb-hover-input
+              hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
               rounded-lg
               cursor-pointer
             ">
             <div class="
-                bg-fb-input
+                bg-fb-input dark:bg-fb-input-dark
                 rounded-full
                 p-2
                 mr-2
@@ -123,8 +135,8 @@
               </svg>
             </div>
             <div class="flex-1">
-              <p class="text-sm text-white mb-[2px]">貼文</p>
-              <p class="text-xs text-gray-400">在動態消息分享貼文。</p>
+              <p class="text-sm text-[#606770] dark:text-white mb-[2px]">貼文</p>
+              <p class="text-xs text-[#606770] dark:text-gray-400">在動態消息分享貼文。</p>
             </div>
           </div>
         </div>
@@ -132,9 +144,9 @@
         <!-- 下拉選單 2 messenger -->
         <div class="popover-panel hidden"
           id="msg-panel">
-          <p class="text-white mb-3 text-2xl">Messenger</p>
+          <p class="text-[#606770] dark:text-white mb-3 text-2xl">Messenger</p>
           <div class="
-              bg-fb-input
+              bg-fb-input dark:bg-fb-input-dark
               rounded-full
               py-1
               px-3
@@ -154,7 +166,7 @@
             </svg>
             <input type="text"
               id="msg-input"
-              class="w-full bg-transparent focus:outline-none text-white"
+              class="w-full bg-transparent focus:outline-none text-[#606770] dark:text-white"
               placeholder="搜尋 Messenger" />
           </div>
 
@@ -164,7 +176,7 @@
               mb-2
               p-2
               rounded-lg
-              hover:bg-fb-hover-input
+              hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
               cursor-pointer
             ">
             <div class="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
@@ -173,8 +185,8 @@
                 alt="" />
             </div>
             <div class="flex-1">
-              <p class="text-base text-white mb-[2px]">SingYo</p>
-              <p class="text-sm text-gray-400">TailwindCSS讚讚！・1分鐘前</p>
+              <p class="text-base text-[#606770] dark:text-white mb-[2px]">SingYo</p>
+              <p class="text-sm text-[#606770] dark:text-gray-400">TailwindCSS讚讚！・1分鐘前</p>
             </div>
           </div>
 
@@ -183,7 +195,7 @@
         <!-- 下拉選單 3 notification -->
         <div class="popover-panel hidden"
           id="notification-panel">
-          <p class="text-white mb-3 text-2xl">通知</p>
+          <p class="text-[#606770] dark:text-white mb-3 text-2xl">通知</p>
 
           <div class="
               flex
@@ -191,7 +203,7 @@
               mb-2
               p-2
               rounded-lg
-              hover:bg-fb-hover-input
+              hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
               cursor-pointer
             ">
             <div class="w-[50px] h-[50px] rounded-full overflow-hidden mr-3">
@@ -200,7 +212,7 @@
                 alt="" />
             </div>
             <div class="flex-1">
-              <p class="text-sm text-white mb-[2px]">
+              <p class="text-sm text-[#606770] dark:text-white mb-[2px]">
                 SingYo習得TailwindCSS!
               </p>
               <p class="text-xs text-fb">1分鐘前</p>
@@ -216,7 +228,7 @@
               items-center
               mb-2
               rounded-lg
-              hover:bg-fb-hover-input
+              hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
               cursor-pointer
             ">
             <div class="w-[60px] h-[60px] m-2 rounded-full overflow-hidden mr-3">
@@ -225,8 +237,8 @@
                 alt="" />
             </div>
             <div class="flex-1">
-              <p class="text-base text-white mb-[2px]">SingYo</p>
-              <p class="text-sm text-gray-400">查看你的個人檔案</p>
+              <p class="text-base text-black dark:text-white mb-[2px]">SingYo</p>
+              <p class="text-sm text-black dark:text-gray-400">查看你的個人檔案</p>
             </div>
           </div>
           <hr class="opacity-20 p-2" />
@@ -234,33 +246,37 @@
             flex
             mb-2
             items-center
-            hover:bg-fb-hover-input
+            hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
             rounded-lg
             cursor-pointer
             "
-            id="color-theme-switcher"
-          >
+            id="color-theme-switcher">
             <button class="
-              bg-fb-input
+              bg-fb-input dark:bg-fb-input-dark
               rounded-full
               p-2 m-2
               flex justify-center items-center
             ">
-              <span class="iconify pointer-events-none text-white" data-icon="icon-park-outline:sun" data-height="22"></span>
-              <span class="iconify pointer-events-none hidden duration-200" data-icon="eva:moon-fill" style="color: #222;" data-height="24"></span>
+              <span id="logo-sun" class="iconify pointer-events-none text-black dark:text-white hidden duration-200"
+                data-icon="icon-park-outline:sun"
+                data-height="22"></span>
+              <span id="logo-moon" class="iconify pointer-events-none duration-200 text-black"
+                data-icon="eva:moon-fill"
+                data-height="24"></span>
             </button>
-            <p class="flex-1 text-white" id="color-theme-info">日間模式</p>
+            <p class="flex-1 text-black dark:text-white"
+              id="color-theme-info">顯示：夜晚</p>
           </div>
           <div class="
               flex
               mb-2
               items-center
-              hover:bg-fb-hover-input
+              hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
               rounded-lg
               cursor-pointer
             ">
             <div class="
-                bg-fb-input
+                bg-fb-input dark:bg-fb-input-dark
                 rounded-full
                 p-2
                 m-2
@@ -268,9 +284,11 @@
                 justify-center
                 items-center
               ">
-              <span class="iconify" data-icon="tabler:logout" style="color: white;" data-height="22"></span>
+              <span class="iconify text-black dark:text-white"
+                data-icon="tabler:logout"
+                data-height="22"></span>
             </div>
-            <p class="flex-1 text-white">登出</p>
+            <p class="flex-1 text-black dark:text-white">登出</p>
           </div>
         </div>
       </div>
@@ -299,7 +317,7 @@
                   <img class="object-cover w-full h-full duration-500 hover:scale-105"
                     src="https://drive.google.com/uc?export=download&id=1SVJqSCbqVfFv8epyIVQn3OnILY8X0BDs" />
                 </div>
-                <div class="bg-fb-card pt-6 px-2 pb-2 relative">
+                <div class="bg-fb-card dark:bg-fb-card-dark pt-6 px-2 pb-2 relative">
                   <button class="
                     w-[32px]
                     h-[32px]
@@ -311,13 +329,14 @@
                     rounded-full
                     focus:outline-none
                     ring-fb-card ring-4
+                    dark:ring-fb-card-dark
                     flex
                     justify-center
                     items-center
                   ">
                     <img src="https://bruce-fe-fb.web.app/image/plus.svg" />
                   </button>
-                  <p class="w-full text-center text-white dark:text-red-500">建立限時動態</p>
+                  <p class="w-full text-center text-black dark:text-white">建立限時動態</p>
                 </div>
               </div>
             </div>
@@ -332,67 +351,72 @@
             w-[45px]
             h-[45px]
           ">
-            <img src="https://bruce-fe-fb.web.app/image/right-arrow.svg" />
+            <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
+            data-icon="eva:arrow-forward-outline"
+            data-height="30"></span>
           </button>
 
         </div>
         <!-- 在想些什麼？ -->
-        <div class="rounded-lg mt-4 px-4 py-3 bg-fb-card">
+        <div class="rounded-lg mt-4 px-4 py-3 bg-fb-card dark:bg-fb-card-dark shadow">
           <div class="flex pb-4">
             <div class="w-[44px] h-[44px] rounded-full overflow-hidden mr-3">
               <img src="https://drive.google.com/uc?export=download&id=1SVJqSCbqVfFv8epyIVQn3OnILY8X0BDs" />
             </div>
-            <div class="bg-fb-input flex-1 rounded-full flex items-center">
+            <div class="bg-fb-input dark:bg-fb-input-dark flex-1 rounded-full flex items-center">
               <input type="text"
-                class="text-left text-sm pl-3 w-full bg-transparent text-white focus:outline-none"
+                class="text-left text-sm pl-3 w-full bg-transparent text-black dark:text-white focus:outline-none"
                 placeholder="在想些什麼？" />
             </div>
           </div>
 
-          <div class="border-t border-gray-700 flex pt-3">
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input flex items-center justify-center">
+          <div class="border-t border-[#e4e6eb] dark:border-[#3a3b3c] flex pt-3">
+            <button
+              class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark flex items-center justify-center">
               <div class="w-[16px]">
                 <img src="https://bruce-fe-fb.web.app/image/camera.svg"
                   alt="" />
               </div>
-              <p class="text-gray-400 text-sm pl-1.5">直播視訊</p>
+              <p class="text-[#606770] dark:text-gray-400 text-sm pl-1.5">直播視訊</p>
             </button>
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input flex items-center justify-center">
+            <button
+              class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark flex items-center justify-center">
               <div class="w-[16px]">
                 <img src="https://bruce-fe-fb.web.app/image/photo.svg"
                   alt="" />
               </div>
-              <p class="text-gray-400 text-sm pl-1.5">相片／影片</p>
+              <p class="text-[#606770] dark:text-gray-400 text-sm pl-1.5">相片／影片</p>
             </button>
-            <button class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input flex items-center justify-center">
+            <button
+              class="flex-1 h-[40px] rounded-lg hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark flex items-center justify-center">
               <div class="w-[16px]">
                 <img src="https://bruce-fe-fb.web.app/image/feel.svg"
                   alt="" />
               </div>
-              <p class="text-gray-400 text-sm pl-1.5">感受／活動</p>
+              <p class="text-[#606770] dark:text-gray-400 text-sm pl-1.5">感受／活動</p>
             </button>
           </div>
         </div>
 
         <!-- 開包廂 -->
-        <div class="card pr-0 flex">
+        <div class="card h-[64px] pr-0 shadow">
           <!-- Swiper -->
-          <div class="swiper-container p-[5px] fb-live">
-            <div class="swiper-wrapper w-auto">
+          <div class="swiper-container h-full p-0 fb-live flex items-center">
+            <div class="swiper-wrapper w-auto ">
               <!-- 建立包廂按鈕 -->
               <div class="swiper-slide w-auto">
                 <button class="
-              mr-4
-              px-4
-              h-[40px]
-              ring-1 ring-gray-600
-              flex
-              items-center
-              rounded-full
-              focus:outline-none
-              hover:ring-2
-              hover:ring-blue-500
-            ">
+                  mr-4
+                  px-3
+                  h-[40px]
+                  ring-2 ring-[#c1e4fd]
+                  flex
+                  items-center
+                  rounded-full
+                  focus:outline-none
+                  hover:bg-fb-bg duration-200
+                  dark:hover:bg-[#3e4042]
+                ">
                   <div class="w-[24px]">
                     <img src="https://bruce-fe-fb.web.app/image/video.svg"
                       alt="" />
@@ -404,40 +428,67 @@
 
               </div>
               <div id="swiper-live"
-                class="swiper-slide w-auto flex">
+                class="swiper-slide w-auto flex items-center">
                 <!-- 透過字串模板渲染進來其他slider -->
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="
+                swiper-button-next
+                dark:text-[#a8abaf]
+              bg-[#ffffff] hover:bg-fb-bg
+                dark:bg-fb-input-dark
+                dark:hover:bg-fb-hover-input-dark
+                border ring-[0.1px] ring-[#ced0d2]
+                dark:ring-[0px]
+                dark:border-none
+                dark:shadow-none
+                shadow-xl
+                ">
+              <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
+                data-icon="eva:arrow-ios-forward-outline"
+                data-height="30"></span>
+            </div>
+            <div class="
+                swiper-button-prev
+                dark:text-[#a8abaf]
+              bg-[#ffffff] hover:bg-fb-bg
+                dark:bg-fb-input-dark
+                dark:hover:bg-fb-hover-input-dark
+                border ring-[0.1px] ring-[#ced0d2]
+                dark:ring-[0px]
+                dark:border-none
+                dark:shadow-none
+                shadow-xl
+              ">
+              <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
+                data-icon="eva:arrow-ios-back-fill"
+                data-height="30"></span>
+            </div>
           </div>
         </div>
 
         <!-- 貼文牆 -->
-        <div class="card pb-0 px-0">
+        <div class="card pb-0 px-0 shadow">
           <!-- 貼文標題 -->
-          <div class="flex px-4">
+          <div class="flex p-4">
             <div class="w-[44px] h-[44px] rounded-full overflow-hidden mr-3">
               <img src="https://drive.google.com/uc?export=download&id=1SVJqSCbqVfFv8epyIVQn3OnILY8X0BDs" />
             </div>
             <div class="flex-1">
-              <p class="text-white">SingYo</p>
-              <div class="flex items-center text-gray-400 text-sm">
-                <div>5小時</div>
-                <div>．</div>
+              <p class="text-black dark:text-white">SingYo</p>
+              <div class="flex items-center dark:text-gray-400 text-sm">
+                <p class="text-gray-500 dark:text-gray-400">5小時・</p>
                 <div class="w-[12px]">
-                  <img class="w-full"
-                    src="https://bruce-fe-fb.web.app/image/earth.svg" />
+                  <span class="iconify text-gray-600 dark:text-gray-400" data-icon="gis:earth-atlantic-o" data-height="13"></span>
                 </div>
               </div>
             </div>
-            <button class="w-[12px] focus:outline-none">
-              <img src="https://bruce-fe-fb.web.app/image/more.svg"
-                alt="" />
+            <button class="w-[12px] focus:outline-none mr-3 mb-2">
+              <span class="iconify text-gray-600 dark:text-gray-400" data-icon="ri:more-fill" data-height="22"></span>
             </button>
           </div>
           <!-- 貼文內文 -->
-          <p class="text-base text-gray-300 mt-3 px-4">
+          <p class="text-base text-black dark:text-gray-300 px-4">
             基於wordpress cms平台建置的個人網站。(籌備中)
           </p>
           <!-- 貼文圖片 -->
@@ -449,23 +500,23 @@
               <img src="https://unsplash.com/photos/hxCIfi47FgQ/download?force=true&w=640"
                 class="w-full" />
             </div>
-            <div class="bg-fb-input w-full px-4 py-2 text-white">
-              <p class="text-gray-400 text-sm">https://listener-note.com/</p>
+            <div class="bg-fb-input dark:bg-fb-input-dark w-full px-4 py-2 text-[#606770] dark:text-white">
+              <p class="text-[#606770] dark:text-gray-400 text-sm">https://listener-note.com/</p>
               <p class="text-lg"> Listener's Note </p>
             </div>
           </a>
           <!-- 讚、留言 -->
           <div class="px-4">
-            <div class="border-b border-gray-700 flex justify-between py-3">
+            <div class="border-b border-[#e4e6eb] dark:border-[#3a3b3c] flex justify-between py-3">
               <div class="flex items-center">
                 <div class="w-[18px] mr-2">
                   <img src="https://bruce-fe-fb.web.app/image/like-blue.svg" />
                 </div>
-                <p class="text-sm text-gray-400">Ryan、Annie和其他299人</p>
+                <p class="text-sm text-[#606770] dark:text-gray-400">Ryan、Annie和其他299人</p>
               </div>
               <div class="flex items-center">
-                <p class="text-sm text-gray-400 mr-2">4則留言</p>
-                <p class="text-sm text-gray-400">1次分享</p>
+                <p class="text-sm text-[#606770] dark:text-gray-400 mr-2">4則留言</p>
+                <p class="text-sm text-[#606770] dark:text-gray-400">1次分享</p>
               </div>
             </div>
             <div class="flex items-center py-2">
@@ -473,49 +524,57 @@
                 flex-1
                 h-[40px]
                 rounded-lg
-                hover:bg-fb-hover-input
+                hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
                 flex
                 items-center
                 justify-center
               ">
                 <div class="w-[16px]">
-                  <span class="iconify text-gray-400" data-icon="uiw:dislike-o" data-height="18" data-flip="vertical"></span>
+                  <span class="iconify text-[#606770] dark:text-gray-400"
+                    data-icon="uiw:dislike-o"
+                    data-height="18"
+                    data-flip="vertical"></span>
                 </div>
-                <p class="text-gray-400 text-sm pl-2">讚</p>
+                <p class="text-[#606770] dark:text-gray-400 text-sm pl-2">讚</p>
               </button>
               <button class="
                 flex-1
                 h-[40px]
                 rounded-lg
-                hover:bg-fb-hover-input
+                hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
                 flex
                 items-center
                 justify-center
               ">
                 <div class="w-[16px]">
-                  <span class="iconify text-gray-400" data-icon="majesticons:message-line" data-height="20"></span>
+                  <span class="iconify text-[#606770] dark:text-gray-400"
+                    data-icon="majesticons:message-line"
+                    data-height="20"></span>
                 </div>
-                <p class="text-gray-400 text-sm pl-2">留言</p>
+                <p class="text-[#606770] dark:text-gray-400 text-sm pl-2">留言</p>
               </button>
               <button class="
                 flex-1
                 h-[40px]
                 rounded-lg
-                hover:bg-fb-hover-input
+                hover:bg-fb-hover-input dark:hover:bg-fb-hover-input-dark
                 flex
                 items-center
                 justify-center
               ">
                 <div class="w-[16px]">
-                  <span class="iconify text-gray-400" data-icon="bx:bx-share" data-height="22" data-flip="horizontal"></span>
+                  <span class="iconify text-[#606770] dark:text-gray-400"
+                    data-icon="bx:bx-share"
+                    data-height="22"
+                    data-flip="horizontal"></span>
                 </div>
-                <p class="text-gray-400 text-sm pl-2">分享</p>
+                <p class="text-[#606770] dark:text-gray-400 text-sm pl-2">分享</p>
               </button>
             </div>
           </div>
         </div>
         <!-- 貼文牆 (Loading) -->
-        <div class="card pb-0 px-0 animate-pulse">
+        <div class="card pb-0 px-0 animate-pulse shadow">
           <!-- 貼文標題 -->
           <div class="flex px-4 items-center mb-4">
             <div class="
@@ -524,18 +583,18 @@
               rounded-full
               overflow-hidden
               mr-3
-              bg-fb-input
+              bg-fb-input dark:bg-fb-input-dark
             "></div>
             <div class="flex content-evenly flex-wrap w-[200px] h-[50px]">
-              <div class="bg-fb-input h-[16px] w-[200px] rounded-full"></div>
-              <div class="bg-fb-input h-[12px] w-[100px] rounded-full"></div>
+              <div class="bg-fb-input dark:bg-fb-input-dark h-[16px] w-[200px] rounded-full"></div>
+              <div class="bg-fb-input dark:bg-fb-input-dark h-[12px] w-[100px] rounded-full"></div>
             </div>
           </div>
-          <div class="w-full h-[260px] bg-fb-input rounded-b-lg"></div>
+          <div class="w-full h-[260px] bg-fb-input dark:bg-fb-input-dark rounded-b-lg"></div>
         </div>
 
         <!-- 貼文牆 (Loading) -->
-        <div class="card pb-0 px-0 animate-pulse">
+        <div class="card pb-0 px-0 animate-pulse shadow">
           <!-- 貼文標題 -->
           <div class="flex px-4 items-center mb-4">
             <div class="
@@ -544,21 +603,21 @@
               rounded-full
               overflow-hidden
               mr-3
-              bg-fb-input
+              bg-fb-input dark:bg-fb-input-dark
             "></div>
             <div class="flex content-evenly flex-wrap w-[200px] h-[50px]">
-              <div class="bg-fb-input h-[16px] w-[200px] rounded-full"></div>
-              <div class="bg-fb-input h-[12px] w-[100px] rounded-full"></div>
+              <div class="bg-fb-input dark:bg-fb-input-dark h-[16px] w-[200px] rounded-full"></div>
+              <div class="bg-fb-input dark:bg-fb-input-dark h-[12px] w-[100px] rounded-full"></div>
             </div>
           </div>
-          <div class="w-full h-[260px] bg-fb-input rounded-b-lg"></div>
+          <div class="w-full h-[260px] bg-fb-input dark:bg-fb-input-dark rounded-b-lg"></div>
         </div>
 
       </div>
       <!-- 右側聯絡人 -->
       <div id="right-block"
         class="hidden sticky top-main-span max-w-[360px] w-full h-full lg:block">
-        <p class="mb-2 pl-5 text-lg text-gray-400">聯絡人</p>
+        <p class="mb-2 pl-5 text-lg text-[#606770] dark:text-gray-400">聯絡人</p>
       </div>
     </main>
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
