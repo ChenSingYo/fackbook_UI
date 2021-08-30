@@ -257,10 +257,12 @@
               p-2 m-2
               flex justify-center items-center
             ">
-              <span id="logo-sun" class="iconify pointer-events-none text-black dark:text-white hidden duration-200"
+              <span id="logo-sun"
+                class="iconify pointer-events-none text-black dark:text-white hidden duration-200"
                 data-icon="icon-park-outline:sun"
                 data-height="22"></span>
-              <span id="logo-moon" class="iconify pointer-events-none duration-200 text-black"
+              <span id="logo-moon"
+                class="iconify pointer-events-none duration-200 text-black"
                 data-icon="eva:moon-fill"
                 data-height="24"></span>
             </button>
@@ -352,8 +354,8 @@
             h-[45px]
           ">
             <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
-            data-icon="eva:arrow-forward-outline"
-            data-height="30"></span>
+              data-icon="eva:arrow-forward-outline"
+              data-height="30"></span>
           </button>
 
         </div>
@@ -401,8 +403,8 @@
         <!-- 開包廂 -->
         <div class="card h-[64px] pr-0 shadow">
           <!-- Swiper -->
-          <div class="swiper-container h-full p-0 fb-live flex items-center">
-            <div class="swiper-wrapper w-auto ">
+          <div class="relative swiper-container h-full p-0 fb-live flex items-center overflow-hidden">
+            <div class="swiper-wrapper w-auto">
               <!-- 建立包廂按鈕 -->
               <div class="swiper-slide w-auto">
                 <button class="
@@ -433,36 +435,38 @@
               </div>
             </div>
             <div class="
-                swiper-button-next
-                dark:text-[#a8abaf]
-              bg-[#ffffff] hover:bg-fb-bg
-                dark:bg-fb-input-dark
-                dark:hover:bg-fb-hover-input-dark
-                border ring-[0.1px] ring-[#ced0d2]
-                dark:ring-[0px]
-                dark:border-none
-                dark:shadow-none
-                shadow-xl
-                ">
+              swiper-button-next
+              dark:text-[#a8abaf]
+            bg-[#ffffff] hover:bg-fb-bg
+              dark:bg-fb-input-dark
+              dark:hover:bg-fb-hover-input-dark
+              border ring-[0.1px] ring-[#ced0d2]
+              dark:ring-[0px]
+              dark:border-none
+              dark:shadow-none
+              shadow-xl"
+            >
               <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
                 data-icon="eva:arrow-ios-forward-outline"
-                data-height="30"></span>
+                data-height="30">
+              </span>
             </div>
             <div class="
-                swiper-button-prev
-                dark:text-[#a8abaf]
-              bg-[#ffffff] hover:bg-fb-bg
-                dark:bg-fb-input-dark
-                dark:hover:bg-fb-hover-input-dark
-                border ring-[0.1px] ring-[#ced0d2]
-                dark:ring-[0px]
-                dark:border-none
-                dark:shadow-none
-                shadow-xl
-              ">
+              swiper-button-prev
+              dark:text-[#a8abaf]
+            bg-[#ffffff] hover:bg-fb-bg
+              dark:bg-fb-input-dark
+              dark:hover:bg-fb-hover-input-dark
+              border ring-[0.1px] ring-[#ced0d2]
+              dark:ring-[0px]
+              dark:border-none
+              dark:shadow-none
+              shadow-xl"
+            >
               <span class="iconify text-[#5e5e5e] dark:text-[#ced0d2]"
                 data-icon="eva:arrow-ios-back-fill"
-                data-height="30"></span>
+                data-height="30">
+              </span>
             </div>
           </div>
         </div>
@@ -479,12 +483,16 @@
               <div class="flex items-center dark:text-gray-400 text-sm">
                 <p class="text-gray-500 dark:text-gray-400">5小時・</p>
                 <div class="w-[12px]">
-                  <span class="iconify text-gray-600 dark:text-gray-400" data-icon="gis:earth-atlantic-o" data-height="13"></span>
+                  <span class="iconify text-gray-600 dark:text-gray-400"
+                    data-icon="gis:earth-atlantic-o"
+                    data-height="13"></span>
                 </div>
               </div>
             </div>
             <button class="w-[12px] focus:outline-none mr-3 mb-2">
-              <span class="iconify text-gray-600 dark:text-gray-400" data-icon="ri:more-fill" data-height="22"></span>
+              <span class="iconify text-gray-600 dark:text-gray-400"
+                data-icon="ri:more-fill"
+                data-height="22"></span>
             </button>
           </div>
           <!-- 貼文內文 -->
@@ -620,8 +628,8 @@
         <p class="mb-2 pl-5 text-lg text-[#606770] dark:text-gray-400">聯絡人</p>
       </div>
     </main>
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="./index.js"></script>
   </body>
 
